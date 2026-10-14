@@ -6,7 +6,7 @@
 
 NppShade는 텍스트 암호화와 복호화, 해시 계산, 난수 생성, Base16/Base32/Base64 변환을 제공합니다. 인터페이스는 중국어 간체, 영어, 일본어, 한국어를 지원합니다. 기본적으로 Windows 표시 언어를 따르며 “환경 설정 → 인터페이스 언어”에서 직접 고를 수 있습니다. 대화상자에는 즉시 적용되고 플러그인 메뉴 이름은 Notepad++를 다시 시작한 뒤 갱신됩니다.
 
-개발 및 관리는 [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN)가 맡습니다. 소스 일부는 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)에서 가져왔으며 원본 라이선스 표기를 유지합니다.
+개발 및 관리는 [Rinkomochi](https://github.com/Rinkomochi/NppShade)가 맡습니다. 소스 일부는 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)에서 가져왔으며 원본 라이선스 표기를 유지합니다.
 
 ## 라이선스
 
@@ -113,4 +113,4 @@ msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /
 
 x64 DLL은 `bin/nppshade/x64/Release/NppShade.dll`에 생성됩니다. 새 암호화 데이터는 `<nppshade>` 헤더를 사용하며 기존 `<nppcrypt>` 헤더도 읽을 수 있습니다. 소스에는 명령줄 도구 프로젝트도 포함되어 있습니다. 사용법은 `--help` 출력을 참조하세요. 데스크톱 프리셋 키는 명령줄 도구에서 직접 사용할 수 없습니다.
 
-문제를 보고할 때는 [프로젝트 페이지](https://github.com/Rinkomochi/Nppcrypt-CN)에 Notepad++와 플러그인 버전, 재현 절차를 적어 주세요. 실제 비밀번호나 개인 파일은 첨부하지 마세요.
+문제를 보고할 때는 [프로젝트 페이지](https://github.com/Rinkomochi/NppShade)에 Notepad++와 플러그인 버전, 재현 절차를 적어 주세요. 실제 비밀번호나 개인 파일은 첨부하지 마세요.

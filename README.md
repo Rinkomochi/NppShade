@@ -6,7 +6,7 @@
 
 NppShade encrypts and decrypts text, calculates hashes, generates random data, and converts Base16, Base32 and Base64. The interface supports Simplified Chinese, English, Japanese and Korean. It follows the Windows display language by default. Choose another language in **Preferences > Interface language**; dialogs update immediately, while menu labels update after restarting Notepad++.
 
-NppShade is maintained by [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN). Parts of the source are derived from [chcg/nppcrypt](https://github.com/chcg/nppcrypt); their original license notices are retained.
+NppShade is maintained by [Rinkomochi](https://github.com/Rinkomochi/NppShade). Parts of the source are derived from [chcg/nppcrypt](https://github.com/chcg/nppcrypt); their original license notices are retained.
 
 ## License
 
@@ -114,4 +114,4 @@ msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /
 
 The x64 DLL is written to `bin/nppshade/x64/Release/NppShade.dll`. New encrypted content uses an `<nppshade>` header; existing `<nppcrypt>` headers remain readable. The source also includes the command-line project; consult its `--help` output for command-line options. Desktop preset keys are not directly available to that tool.
 
-Report issues at the [project page](https://github.com/Rinkomochi/Nppcrypt-CN). Include the Notepad++ and plugin versions and reproduction steps; do not attach real passwords or private files.
+Report issues at the [project page](https://github.com/Rinkomochi/NppShade). Include the Notepad++ and plugin versions and reproduction steps; do not attach real passwords or private files.

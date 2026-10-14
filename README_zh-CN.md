@@ -6,7 +6,7 @@
 
 NppShade 可以把文本加密成需要密码才能读取的内容，也可以计算哈希、生成随机数据和转换 Base64 等编码。界面支持简体中文、英文、日文和韩文；默认跟随 Windows 显示语言，也可在“首选项 → 界面语言”中手动选择。切换后对话框立即更新，插件菜单名称在重启 Notepad++ 后更新。
 
-本项目由 [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN) 维护，源码复刻来自 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)。
+本项目由 [Rinkomochi](https://github.com/Rinkomochi/NppShade) 维护，源码复刻来自 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)。
 
 ## 许可证
 
@@ -127,4 +127,4 @@ msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /
 
 本地 x64 构建输出为 `bin/nppshade/x64/Release/NppShade.dll`。旧版 `<nppcrypt>` 文件头仍可读取，新加密内容使用 `<nppshade>` 文件头。源码还保留命令行工具项目，其选项以工具的 `--help` 为准；桌面插件的预设密钥并不能直接在命令行工具中使用。
 
-遇到问题请到 [项目主页](https://github.com/Rinkomochi/Nppcrypt-CN) 反馈，附上 Notepad++ 版本、插件版本和复现步骤，不要提交真实密码或私密文件。
+遇到问题请到 [项目主页](https://github.com/Rinkomochi/NppShade) 反馈，附上 Notepad++ 版本、插件版本和复现步骤，不要提交真实密码或私密文件。

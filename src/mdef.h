@@ -27,7 +27,7 @@ GNU General Public License for more details.
 #define     NPPC_FUNC_CONVERT_ID        4
 
 #define     NPPC_ABOUT_VERSION          "2.0"
-#define     NPPC_ABOUT_GITHUB           "https://github.com/Rinkomochi/Nppcrypt-CN"
+#define     NPPC_ABOUT_GITHUB           "https://github.com/Rinkomochi/NppShade"
 #define     NPPC_UPSTREAM_GITHUB        "https://github.com/chcg/nppcrypt"
 #define     NPPC_ABOUT_CRYPTOPP         "https://www.cryptopp.com"
 #define     NPPC_ABOUT_TINYXML2         "https://github.com/leethomason/tinyxml2"

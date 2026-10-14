@@ -40,7 +40,7 @@ BLOCK "StringFileInfo"
 BEGIN
 BLOCK "080404b0"
 BEGIN
-VALUE "Comments", "Source code at https://github.com/Rinkomochi/Nppcrypt-CN"
+VALUE "Comments", "Source code at https://github.com/Rinkomochi/NppShade"
 VALUE "CompanyName", "cerberus-design.de"
 VALUE "FileDescription", "NppShade - Notepad++ 加密插件"
 VALUE "FileVersion", "2.0"

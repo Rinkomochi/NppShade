@@ -6,7 +6,7 @@
 
 NppShade はテキストの暗号化と復号、ハッシュ計算、乱数生成、Base16/Base32/Base64 変換を行います。画面は簡体字中国語、英語、日本語、韓国語に対応しています。既定では Windows の表示言語に従い、「設定 → 表示言語」で手動選択できます。ダイアログにはすぐ反映されますが、プラグインメニューの表示更新には Notepad++ の再起動が必要です。
 
-開発・保守は [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN)。ソースの一部は [chcg/nppcrypt](https://github.com/chcg/nppcrypt) 由来で、元のライセンス表示を保持しています。
+開発・保守は [Rinkomochi](https://github.com/Rinkomochi/NppShade)。ソースの一部は [chcg/nppcrypt](https://github.com/chcg/nppcrypt) 由来で、元のライセンス表示を保持しています。
 
 ## ライセンス
 
@@ -113,4 +113,4 @@ msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /
 
 x64 DLL の出力先は `bin/nppshade/x64/Release/NppShade.dll` です。新しい暗号化データには `<nppshade>` ヘッダーを使い、既存の `<nppcrypt>` ヘッダーも読み込めます。ソースにはコマンドラインツールも含まれます。使い方は `--help` を参照してください。デスクトップ版のプリセット鍵はコマンドラインツールでは直接使えません。
 
-問題を報告する場合は [プロジェクトページ](https://github.com/Rinkomochi/Nppcrypt-CN) に Notepad++ とプラグインのバージョン、再現手順を記載してください。実際のパスワードや個人ファイルは添付しないでください。
+問題を報告する場合は [プロジェクトページ](https://github.com/Rinkomochi/NppShade) に Notepad++ とプラグインのバージョン、再現手順を記載してください。実際のパスワードや個人ファイルは添付しないでください。

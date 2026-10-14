@@ -88,9 +88,9 @@ const char* ExcInfo::messages[] = {
 
 const char* ExcInfo::urls[] = {
     NULL,
-    "https://github.com/Rinkomochi/Nppcrypt-CN",
-    "https://github.com/Rinkomochi/Nppcrypt-CN",
-    "https://github.com/Rinkomochi/Nppcrypt-CN",
+    "https://github.com/Rinkomochi/NppShade",
+    "https://github.com/Rinkomochi/NppShade",
+    "https://github.com/Rinkomochi/NppShade",
     NULL
 };
 
