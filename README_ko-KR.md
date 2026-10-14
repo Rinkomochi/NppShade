@@ -8,6 +8,10 @@ NppShade는 텍스트 암호화와 복호화, 해시 계산, 난수 생성, Base
 
 개발 및 관리는 [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN)가 맡습니다. 소스 일부는 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)에서 가져왔으며 원본 라이선스 표기를 유지합니다.
 
+## 라이선스
+
+NppShade 자체 코드는 GNU 일반 공중 사용 허가서 버전 2 또는 (선택에 따라) 이후 버전으로 배포됩니다. 자세한 내용은 [LICENSE](LICENSE)를 확인하세요. 타사 구성 요소는 각각의 라이선스를 따르며 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)에 정리되어 있습니다. 릴리스 ZIP에도 라이선스 안내가 포함됩니다.
+
 ## 설치 및 업데이트
 
 1. Notepad++가 x86인지 x64인지 확인하고 GitHub Releases에서 맞는 ZIP을 받습니다.

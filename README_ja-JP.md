@@ -8,6 +8,10 @@ NppShade はテキストの暗号化と復号、ハッシュ計算、乱数生�
 
 開発・保守は [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN)。ソースの一部は [chcg/nppcrypt](https://github.com/chcg/nppcrypt) 由来で、元のライセンス表示を保持しています。
 
+## ライセンス
+
+NppShade 独自のコードは GNU General Public License バージョン 2、または任意のそれ以降のバージョンでライセンスされています。詳細は [LICENSE](LICENSE) をご覧ください。サードパーティ製コンポーネントは各自のライセンスに従います。[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) に記載しています。リリース ZIP にもライセンス表示が含まれます。
+
 ## インストールと更新
 
 1. Notepad++ が x86 か x64 かを確認し、GitHub Releases から同じ種類の ZIP をダウンロードします。

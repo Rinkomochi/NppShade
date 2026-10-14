@@ -8,6 +8,10 @@ NppShade encrypts and decrypts text, calculates hashes, generates random data, a
 
 NppShade is maintained by [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN). Parts of the source are derived from [chcg/nppcrypt](https://github.com/chcg/nppcrypt); their original license notices are retained.
 
+## License
+
+NppShade's own code is licensed under the GNU General Public License, version 2 or (at your option) any later version. See [LICENSE](LICENSE). Third-party components retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Release ZIPs include these notices.
+
 ## Install or update
 
 1. Check whether Notepad++ is x86 or x64 and download the matching ZIP from GitHub Releases.

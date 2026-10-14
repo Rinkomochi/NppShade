@@ -8,6 +8,10 @@ NppShade 可以把文本加密成需要密码才能读取的内容，也可以�
 
 本项目由 [Rinkomochi](https://github.com/Rinkomochi/Nppcrypt-CN) 维护，源码复刻来自 [chcg/nppcrypt](https://github.com/chcg/nppcrypt)。
 
+## 许可证
+
+NppShade 自有代码采用 GNU 通用公共许可证第 2 版或（由你选择）任何更高版本，详见 [LICENSE](LICENSE)。第三方组件仍遵循各自的许可证，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。发行版 ZIP 包也包含这些许可说明。
+
 ## 安装或更新
 
 1. 在 Notepad++ 的“关于”里确认程序位数，并下载相同位数的 x86 或 x64 安装包。
