@@ -38,16 +38,14 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       run: |
            $PackageDir = Join-Path $env:RUNNER_TEMP "NppShade-package"
+           $PluginDir = Join-Path $PackageDir "NppShade"
            $Archive = Join-Path $env:GITHUB_WORKSPACE "NppShade_${{ github.ref_name }}_${{ matrix.build_platform }}.zip"
-           New-Item -ItemType Directory -Force -Path "$PackageDir\licenses\cli11", "$PackageDir\licenses\scrypt", "$PackageDir\licenses\cryptopp", "$PackageDir\licenses\tinyxml2" | Out-Null
-           Copy-Item ".\bin\nppshade\${{ matrix.build_platform }}\Release\NppShade.dll" $PackageDir
-           Copy-Item LICENSE, THIRD_PARTY_NOTICES.md $PackageDir
-           Copy-Item .\doc\cli11\LICENSE "$PackageDir\licenses\cli11\LICENSE"
-           Copy-Item .\doc\scrypt\COPYRIGHT "$PackageDir\licenses\scrypt\COPYRIGHT"
-           Copy-Item .\doc\cryptopp\License.txt "$PackageDir\licenses\cryptopp\License.txt"
-           Copy-Item .\doc\tinyxml2\readme.md "$PackageDir\licenses\tinyxml2\readme.md"
+           if (Test-Path $PackageDir) { Remove-Item $PackageDir -Recurse -Force }
+           if (Test-Path $Archive) { Remove-Item $Archive -Force }
+           New-Item -ItemType Directory -Force -Path $PluginDir | Out-Null
+           Copy-Item ".\bin\nppshade\${{ matrix.build_platform }}\Release\NppShade.dll" $PluginDir
            Push-Location $PackageDir
-           7z a $Archive .\NppShade.dll .\LICENSE .\THIRD_PARTY_NOTICES.md .\licenses
+           7z a $Archive .\NppShade
            if ($LASTEXITCODE -ne 0) { throw "7-Zip failed with exit code $LASTEXITCODE" }
            Pop-Location
 
