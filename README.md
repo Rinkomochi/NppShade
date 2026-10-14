@@ -112,6 +112,6 @@ Install Visual Studio 2022 with the C++ desktop tools and Windows SDK. In a Deve
 msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /p:Platform=x64
 ```
 
-The x64 DLL is written to `bin/nppshade/x64/Release/NppShade.dll`. New encrypted content uses an `<nppshade>` header; existing `<nppcrypt>` headers remain readable. The source also includes the command-line project; consult its `--help` output for command-line options. Desktop preset keys are not directly available to that tool.
+The x64 DLL is written to `bin/nppshade/x64/Release/NppShade.dll`. The source also includes the command-line project; consult its `--help` output for command-line options. Desktop preset keys are not directly available to that tool.
 
 Report issues at the [project page](https://github.com/Rinkomochi/NppShade). Include the Notepad++ and plugin versions and reproduction steps; do not attach real passwords or private files.

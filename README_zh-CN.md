@@ -125,6 +125,6 @@ GitHub 上以版本标签创建发行版时，工作流会自动构建 x86 和 x
 msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /p:Platform=x64
 ```
 
-本地 x64 构建输出为 `bin/nppshade/x64/Release/NppShade.dll`。旧版 `<nppcrypt>` 文件头仍可读取，新加密内容使用 `<nppshade>` 文件头。源码还保留命令行工具项目，其选项以工具的 `--help` 为准；桌面插件的预设密钥并不能直接在命令行工具中使用。
+本地 x64 构建输出为 `bin/nppshade/x64/Release/NppShade.dll`。源码还保留命令行工具项目，其选项以工具的 `--help` 为准；桌面插件的预设密钥并不能直接在命令行工具中使用。
 
 遇到问题请到 [项目主页](https://github.com/Rinkomochi/NppShade) 反馈，附上 Notepad++ 版本、插件版本和复现步骤，不要提交真实密码或私密文件。

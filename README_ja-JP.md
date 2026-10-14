@@ -111,6 +111,6 @@ Visual Studio 2022 の C++ デスクトップ開発ツールと Windows SDK を�
 msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /p:Platform=x64
 ```
 
-x64 DLL の出力先は `bin/nppshade/x64/Release/NppShade.dll` です。新しい暗号化データには `<nppshade>` ヘッダーを使い、既存の `<nppcrypt>` ヘッダーも読み込めます。ソースにはコマンドラインツールも含まれます。使い方は `--help` を参照してください。デスクトップ版のプリセット鍵はコマンドラインツールでは直接使えません。
+x64 DLL の出力先は `bin/nppshade/x64/Release/NppShade.dll` です。ソースにはコマンドラインツールも含まれます。使い方は `--help` を参照してください。デスクトップ版のプリセット鍵はコマンドラインツールでは直接使えません。
 
 問題を報告する場合は [プロジェクトページ](https://github.com/Rinkomochi/NppShade) に Notepad++ とプラグインのバージョン、再現手順を記載してください。実際のパスワードや個人ファイルは添付しないでください。

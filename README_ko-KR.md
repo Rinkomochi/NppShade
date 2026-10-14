@@ -111,6 +111,6 @@ Visual Studio 2022 C++ 데스크톱 개발 도구와 Windows SDK를 설치하고
 msbuild projects\msvc2017\nppshade.sln /m /t:nppshade /p:Configuration=Release /p:Platform=x64
 ```
 
-x64 DLL은 `bin/nppshade/x64/Release/NppShade.dll`에 생성됩니다. 새 암호화 데이터는 `<nppshade>` 헤더를 사용하며 기존 `<nppcrypt>` 헤더도 읽을 수 있습니다. 소스에는 명령줄 도구 프로젝트도 포함되어 있습니다. 사용법은 `--help` 출력을 참조하세요. 데스크톱 프리셋 키는 명령줄 도구에서 직접 사용할 수 없습니다.
+x64 DLL은 `bin/nppshade/x64/Release/NppShade.dll`에 생성됩니다. 소스에는 명령줄 도구 프로젝트도 포함되어 있습니다. 사용법은 `--help` 출력을 참조하세요. 데스크톱 프리셋 키는 명령줄 도구에서 직접 사용할 수 없습니다.
 
 문제를 보고할 때는 [프로젝트 페이지](https://github.com/Rinkomochi/NppShade)에 Notepad++와 플러그인 버전, 재현 절차를 적어 주세요. 실제 비밀번호나 개인 파일은 첨부하지 마세요.
