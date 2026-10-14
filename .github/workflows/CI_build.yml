@@ -1,0 +1,67 @@
+name: CI_build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        build_platform: [x64, x86]
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v6
+      with:
+        submodules: 'true'
+
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v3
+
+    - name: MSBuild of plugin dll Debug
+      working-directory: .\projects\msvc2017
+      run: |
+           msbuild nppshade.sln /m /t:cmdline /m /p:configuration=Debug /p:platform="${{ matrix.build_platform }}"
+           msbuild nppshade.sln /m /t:cryptlib /m /p:configuration=Debug /p:platform="${{ matrix.build_platform }}"
+           msbuild nppshade.sln /m /t:nppshade /m /p:configuration=Debug /p:platform="${{ matrix.build_platform }}"
+
+    - name: MSBuild of plugin dll Release
+      working-directory: .\projects\msvc2017
+      run: |
+           msbuild nppshade.sln /m /t:cmdline /p:configuration=Release /p:platform="${{ matrix.build_platform }}"
+           msbuild nppshade.sln /m /t:cryptlib /p:configuration=Release /p:platform="${{ matrix.build_platform }}"
+           msbuild nppshade.sln /m /t:nppshade /p:configuration=Release /p:platform="${{ matrix.build_platform }}"
+
+    - name: Package release artifact
+      if: startsWith(github.ref, 'refs/tags/')
+      run: |
+           7z a NppShade_${{ github.ref_name }}_${{ matrix.build_platform }}.zip .\bin\nppshade\${{ matrix.build_platform }}\Release\NppShade.dll
+
+    - name: Archive artifacts for Release ${{ matrix.build_platform }}
+      uses: actions/upload-artifact@v7
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        name: NppShade_${{ github.ref_name }}_${{ matrix.build_platform }}.zip
+        path: NppShade_${{ github.ref_name }}_${{ matrix.build_platform }}.zip
+        if-no-files-found: error
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Download architecture packages
+      uses: actions/download-artifact@v7
+      with:
+        pattern: NppShade_${{ github.ref_name }}_*.zip
+        path: release-assets
+        merge-multiple: true
+
+    - name: Publish GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: release-assets/NppShade_${{ github.ref_name }}_*.zip
