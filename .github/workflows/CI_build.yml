@@ -55,7 +55,7 @@ jobs:
       contents: write
     steps:
     - name: Download architecture packages
-      uses: actions/download-artifact@v7
+      uses: actions/download-artifact@v8
       with:
         pattern: NppShade_${{ github.ref_name }}_*.zip
         path: release-assets
